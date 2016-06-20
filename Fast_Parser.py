@@ -23,8 +23,8 @@ def parse_chapter(chapter_name):
         f = open(soup.find("td", {"width":"100%","align":"center","height":"30"}).string+'.html', 'w')
         f.write('<html xmlns:m="http://www.w3.org/1998/Math/MathML"><head><meta charset="windows-1251"></head><body class="printbody" style="font-size:11pt">')
         image_src = 'src="' + browser.current_url[:browser.current_url.find("/xmodules")] + "/docs"
-        #page_count = int(question_count // 10 + math.ceil(question_count % 10 / 10))
-        page_count = 2
+        page_count = int(question_count // 10 + math.ceil(question_count % 10 / 10))
+        #page_count = 2
         CurrentTime = time.time()
         
         for j in range(page_count-1):             
@@ -47,8 +47,8 @@ def parse_chapter(chapter_name):
         
 print('Browser loading..')
 #browser = webdriver.Chrome('C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe')
-#browser = webdriver.PhantomJS()
-browser=webdriver.Firefox(firefox_profile='tor')
+browser = webdriver.PhantomJS()
+#browser=webdriver.Firefox(firefox_profile='tor')
 
 
 print('Fipi connecting..')
