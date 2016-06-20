@@ -16,7 +16,7 @@ from selenium.webdriver.common.by import By
 def parse_chapter(chapter_name):    
     browser.find_element_by_link_text(chapter_name).click() 
     soup = BeautifulSoup(browser.page_source,  "html5lib")
-    question_count = int(''.join(x for x in soup.find("td", {"width":"100%","align":"center","height":"30"}).string if x.isdigit())) #ÔÓÎÛ˜ËÚ¸ ˆËÙ˚ ËÁ Ì‡Á‚‡ÌËˇ ‡Á‰ÂÎ‡
+    question_count = int(''.join(x for x in soup.find("td", {"width":"100%","align":"center","height":"30"}).string if x.isdigit())) #–ø–æ–ª—É—á–∏—Ç—å —Ü–∏—Ñ—Ä—ã –∏–∑ –Ω–∞–∑–≤–∞–Ω–∏—è —Ä–∞–∑–¥–µ–ª–∞
     print('Parsing chapter: ' + chapter_name +' - ' + str(question_count)) 
     
     if question_count > 0:
@@ -52,10 +52,10 @@ browser=webdriver.Firefox(firefox_profile='tor')
 
 
 print('Fipi connecting..')
-subject = u"Ã¿“≈Ã¿“» ¿"
+subject = u"–ú–ê–¢–ï–ú–ê–¢–ò–ö–ê"
 level = 'oge'
 
-subjects = [u'¡»ŒÀŒ√»ﬂ', u'»—“Œ–»ﬂ', u'Œ¡Ÿ≈—“¬Œ«Õ¿Õ»≈', u'√≈Œ√–¿‘»ﬂ', u'¿Õ√À»…— »… ﬂ«€ ', u'Õ≈Ã≈÷ »… ﬂ«€ ',u'‘–¿Õ÷”«— »… ﬂ«€ ',u'»—œ¿Õ— »… ﬂ«€ ',u'À»“≈–¿“”–¿',u'–”—— »… ﬂ«€ ', u'Ã¿“≈Ã¿“» ¿',u'‘»«» ¿',u'’»Ã»ﬂ',u'»Õ‘Œ–Ã¿“» ¿ Ë » “']
+subjects = [u'–ë–ò–û–õ–û–ì–ò–Ø', u'–ò–°–¢–û–†–ò–Ø', u'–û–ë–©–ï–°–¢–í–û–ó–ù–ê–ù–ò–ï', u'–ì–ï–û–ì–†–ê–§–ò–Ø', u'–ê–ù–ì–õ–ò–ô–°–ö–ò–ô –Ø–ó–´–ö', u'–ù–ï–ú–ï–¶–ö–ò–ô –Ø–ó–´–ö',u'–§–†–ê–ù–¶–£–ó–°–ö–ò–ô –Ø–ó–´–ö',u'–ò–°–ü–ê–ù–°–ö–ò–ô –Ø–ó–´–ö',u'–õ–ò–¢–ï–†–ê–¢–£–†–ê',u'–†–£–°–°–ö–ò–ô –Ø–ó–´–ö', u'–ú–ê–¢–ï–ú–ê–¢–ò–ö–ê',u'–§–ò–ó–ò–ö–ê',u'–•–ò–ú–ò–Ø',u'–ò–ù–§–û–†–ú–ê–¢–ò–ö–ê –∏ –ò–ö–¢']
 
 levels = ['ege', 'oge']       
 for level in levels:
