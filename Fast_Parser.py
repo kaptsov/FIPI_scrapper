@@ -76,7 +76,7 @@ def parse_chapter(examName, subjectName, chapter_name, cxn, cur, chap_link ):
 ################################################################################
 print('Database connecting..')
 
-cxn = psycopg2.connect(user='postgres', database = 'fipi_db', password ='jgwssljcnegf784523', host = 'kapets', port = '5432')
+cxn = psycopg2.connect(user='postgres', database = 'fipi_db', password ='111', host = 'kapets', port = '5432')
 cxn.autocommit = True
 cur = cxn.cursor()      
 
